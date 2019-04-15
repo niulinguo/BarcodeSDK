@@ -22,7 +22,7 @@ public class ScanActivity extends AppCompatActivity implements ZBarScannerView.R
 
     private static final String TAG = "ScanActivity";
 
-    private ZBarScannerView mScannerView;
+    private MyScannerView mScannerView;
 
     @Override
     public void onCreate(Bundle state) {
@@ -31,7 +31,7 @@ public class ScanActivity extends AppCompatActivity implements ZBarScannerView.R
         Window window = getWindow();
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
-        mScannerView = new ZBarScannerView(this);   // Programmatically initialize the scanner view
+        mScannerView = new MyScannerView(this);   // Programmatically initialize the scanner view
         setContentView(mScannerView);                // Set the scanner view as the content view
 
         ActionBar actionBar = getSupportActionBar();

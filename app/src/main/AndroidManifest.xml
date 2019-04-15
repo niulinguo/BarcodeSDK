@@ -22,7 +22,7 @@
         <activity
             android:name="com.niles.barcode.ScanActivity"
             android:label="扫描"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
