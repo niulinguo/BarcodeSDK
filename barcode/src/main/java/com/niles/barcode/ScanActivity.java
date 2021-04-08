@@ -80,7 +80,11 @@ public class ScanActivity extends AppCompatActivity implements QRCodeView.Delega
     private void vibrate() {
         Vibrator vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
         if (vibrator != null) {
-            vibrator.vibrate(200);
+            try {
+                vibrator.vibrate(200);
+            } catch (SecurityException e) {
+                // 没有震动权限
+            }
         }
     }
 
