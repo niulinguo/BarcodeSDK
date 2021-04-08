@@ -61,7 +61,7 @@ public class ScanActivity extends AppCompatActivity implements QRCodeView.Delega
         super.onStart();
         mZBarView.startCamera(); // 打开后置摄像头开始预览，但是并未开始识别
 //        mZBarView.startCamera(Camera.CameraInfo.CAMERA_FACING_FRONT); // 打开前置摄像头开始预览，但是并未开始识别
-
+        mZBarView.setType(BarcodeType.ALL, null);
         mZBarView.startSpotAndShowRect(); // 显示扫描框，并开始识别
     }
 
